@@ -24,7 +24,7 @@ function generateHTML(movieCollection, selector) {
   let movieHTML = "";
   movieCollection.forEach((movie) => {
     movieHTML += `
-    <div class="movie-container">
+    <div class="movie-container js-movie-container" data-movie-id="${movie.id}">
           <div class="movie-poster">
             <img src="${movie.getPosterUrl()}" alt="" />
           </div>
@@ -40,7 +40,17 @@ function generateHTML(movieCollection, selector) {
     
     `;
   });
-
   //   We are locating the html class here and changing the inner html to movie
+
   document.querySelector(`.js-${selector}-main-grid`).innerHTML = movieHTML;
+
+  // Adding event listener to each movie container
+  let movieButtons = document.querySelectorAll(".js-movie-container");
+
+  movieButtons.forEach((button) => {
+    let movieId = button.dataset.movieId;
+    button.addEventListener("click", () => {
+      window.location.href = `../pages/details.html?movieId=${movieId}`;
+    });
+  });
 }

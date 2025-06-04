@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style/fonts.css" />
+    <link rel="stylesheet" href="/style/general.css" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/details.css" />
+  </head>
+  <body bgcolor="#00001">
+    <nav class="navbar">
+      <div class="logo">CineQuest</div>
+
+      <div class="navbar-search-box">
+        <input
+          placeholder="Search for Movies"
+          class="navbar-search-input"
+          type="text"
+        />
+
+        <button class="navbar-search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </nav>
+
+    <button class="back-button"><i class="fa-solid fa-arrow-left"></i></button>
+    <section class="single-movie-container">
+      <div class="single-movie-title">Thudarum</div>
+      <div class="single-movie-year">2025</div>
+      <div class="single-movie-poster">
+        <img src="../assets/image.png" alt="" />
+      </div>
+
+      <div class="single-movie-detail">
+        <div>
+          <div class="single-movie-language">Malayalam</div>
+          <div class="single-movie-genre">Crime/Triller</div>
+        </div>
+        <div class="single-movie-rating">
+          <i class="fa-solid fa-star movie-star"></i>
+          <span>7.8</span>
+        </div>
+      </div>
+
+      <div class="single-movie-desc-box">
+        <span>Description</span>
+        <p class="single-movie-desc">
+          his is triller movie with type of data called with new main features
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+          distinctio Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Pariatur deserunt nihil aspernatur harum rerum, incidunt distinctio
+          cumque quam eveniet repellendus!
+        </p>
+      </div>
+
+      <span class="single-movie-cast-title">Cast</span>
+      <div class="single-movie-cast-box">
+        <div class="cast-box">
+          <div class="cast-img-box">
+            <img src="../components/image.png" alt="" />
+          </div>
+          <div class="cast-name">Mohanlal</div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script type="module" src="../scripts/details.js"></script>
+</html>

@@ -1,3 +1,4 @@
+import iso6391 from "https://esm.sh/iso-639-1";
 class Movie {
   id;
   title;
@@ -7,6 +8,7 @@ class Movie {
   originalLanguage;
   description;
   genreIds;
+  genres;
 
   constructor(movieDetails) {
     this.id = movieDetails.id;
@@ -17,6 +19,7 @@ class Movie {
     this.description = movieDetails.description;
     this.originalLanguage = movieDetails.originalLanguage;
     this.genreIds = movieDetails.genreIds;
+    this.genres = movieDetails.genres;
   }
 
   getPosterUrl() {
@@ -30,11 +33,15 @@ class Movie {
     let year = date.getFullYear();
     return year;
   }
+  getLanguage() {
+    let lang = iso6391.getName(this.originalLanguage);
+    return lang;
+  }
 }
 
 const apiKey = "6611e0fcfa7c8d1e9db14266919ca167";
 
-let data;
+export let singleMovieData;
 // Global Arrays of movies
 export let popularMovies = [];
 export let nowPlayingMovies = [];
@@ -47,7 +54,7 @@ export let getMovies = async (type) => {
   console.log(url);
   let response = await fetch(url);
 
-  data = await response.json();
+  let data = await response.json();
 
   let moviesCollection = data.results.map((movie) => {
     return new Movie({
@@ -59,6 +66,7 @@ export let getMovies = async (type) => {
       description: movie.overview,
       originalLanguage: movie.original_language,
       genreIds: movie.genre_ids,
+      genres: movie.genres,
     });
   });
   if (type === "popular") {
@@ -70,3 +78,22 @@ export let getMovies = async (type) => {
     nowPlayingMovies = moviesCollection;
   }
 };
+
+export async function getMovieDetails(movieId) {
+  let url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
+
+  let response = await fetch(url);
+  let data = await response.json();
+
+  let movieData = new Movie({
+    id: data.id,
+    title: data.title,
+    releaseDate: data.release_date,
+    rating: data.vote_average,
+    posterPath: data.poster_path,
+    description: data.overview,
+    originalLanguage: data.original_language,
+    genres: data.genres,
+  });
+  singleMovieData = movieData;
+}
