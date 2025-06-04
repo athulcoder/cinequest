@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'cherry-bomb';
+    src: url('/fonts/Cherry_Bomb_One/CherryBombOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'jersey';
+    src: url('/fonts/Jersey_15/Jersey15-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+}
