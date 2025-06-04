@@ -3,8 +3,8 @@ import {
   popularMovies,
   upcomingMovies,
   nowPlayingMovies,
-} from "./scripts/data/movies.js";
-
+} from "./data/movies.js";
+import { formatMovieRating } from "./utils/utils.js";
 async function getAll() {
   await getMovies("popular");
   await getMovies("now_playing");
@@ -32,7 +32,9 @@ function generateHTML(movieCollection, selector) {
           <div class="movie-title">${movie.title}</div>
           <div class="movie-details">
             <div class="movie-year">${movie.getMovieYear()}</div>
-            <div class="movie-rating">${movie.rating}</div>
+            <div class="movie-rating"> <i class="fa-solid fa-star movie-star"></i>${formatMovieRating(
+              movie.rating
+            )}</div>
           </div>
         </div>
     

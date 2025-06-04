@@ -39,7 +39,7 @@
 
 .navbar-search-button {
     padding: 3px 4px;
-    background-color: rgb(0, 64, 255);
+    background-color: rgb(45, 209, 12);
     border: none;
     color: white;
     width: 30px;
@@ -98,7 +98,7 @@
 }
 
 .movie-container:hover {
-    border: 1px solid rgb(11, 81, 244);
+    border: 1px solid rgb(45, 209, 12);
 }
 
 .movie-poster,
@@ -113,7 +113,7 @@
     color: #464748;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 4px 3px;
+    padding: 4px 7px;
 
 }
 
@@ -126,13 +126,23 @@
 
 .movie-year {
     color: rgb(77, 69, 69);
-    font-weight: 100;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 14px;
 
 }
 
 .movie-rating {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
     color: rgb(172, 158, 5);
+}
+
+.movie-star {
+    color: rgb(45, 209, 12);
 }
 
 
@@ -175,11 +185,12 @@
 
 @media (min-width: 992px) {
     .navbar-search-input {
-        width: 370px;
+        width: 600px;
         font-size: 17px;
     }
 
     .navbar-search-button {
         height: 33px;
+        width: 44px;
     }
 }
