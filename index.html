@@ -1,528 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CineQuest | Movie search</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/general.css" />
-    <link rel="stylesheet" href="./style/fonts.css" />
-  </head>
-  <body bgcolor="#00001">
-    <!-- Navbar of app -->
-    <nav class="navbar">
-      <div class="logo">CineQuest</div>
 
-      <div class="navbar-search-box">
-        <input
-          placeholder="Search for Movies"
-          class="navbar-search-input"
-          type="text"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineQuest | Movie search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./style/general.css" />
+  <link rel="stylesheet" href="./style/fonts.css" />
+</head>
 
-        <button class="navbar-search-button">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
-    </nav>
+<body bgcolor="#00001">
+  <!-- Navbar of app -->
+  <nav class="navbar">
+    <div class="logo">CineQuest</div>
 
-    <section class="main-grid ">
+    <div class="navbar-search-box">
+      <input placeholder="Search for Movies" class="navbar-search-input" type="text" />
+
+      <button class="navbar-search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="main-grid ">
     <div class="main-grid-title">Populars</div>
-      <div class="movie-scroll-view js-popular-main-grid">
-        <!-- Movie 1 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <!-- movie 2 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <!-- Movie 3 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-        
-        <!-- Movie 4 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-        
-        <!-- Movie 5 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
+    <div class="movie-scroll-view js-popular-main-grid">
+      <!-- Movie 1 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
         </div>
       </div>
+      <!-- movie 2 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
       </div>
-    </section>
+
+      <!-- Movie 3 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <!-- Movie 4 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <!-- Movie 5 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
 
 
 
-    <!-- Now playing  -->
+  <!-- Now playing  -->
 
-    <section class="main-grid">
+  <section class="main-grid">
     <div class="main-grid-title">Now Playing</div>
-      <div class="movie-scroll-view js-now-playing-main-grid">
-        <!-- Movie 1 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <!-- movie 2 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <!-- Movie 3 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-        
-        <!-- Movie 4 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-        
-        <!-- Movie 5 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
+    <div class="movie-scroll-view js-now-playing-main-grid">
+      <!-- Movie 1 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
         </div>
       </div>
+
+      <!-- movie 2 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
       </div>
-    </section>
+      <!-- Movie 3 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <!-- Movie 4 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <!-- Movie 5 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
 
 
-    <!-- Upcoming -->
+  <!-- Upcoming -->
 
-<section class="main-grid">
+  <section class="main-grid">
     <div class="main-grid-title">Upcoming</div>
-      <div class="movie-scroll-view  js-upcoming-main-grid">
-        <!-- Movie 1 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <!-- movie 2 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <!-- Movie 3 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-        
-        <!-- Movie 4 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-        
-        <!-- Movie 5 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
+    <div class="movie-scroll-view  js-upcoming-main-grid">
+      <!-- Movie 1 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
         </div>
       </div>
+
+      <!-- movie 2 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
       </div>
-    </section>
+
+      <!-- Movie 3 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+      <!-- Movie 4 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+      <!-- Movie 5 -->
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster skeleton"></div>
+        <div class="movie-title skeleton"></div>
+        <div class="movie-details">
+          <div class="movie-year skeleton"></div>
+          <div class="movie-rating skeleton"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
 
-    <!-- Trending -->
+  <!-- Trending -->
 
-    <section class="main-grid">
+  <section class="main-grid">
     <div class="main-grid-title">Trending</div>
-      <div class="movie-scroll-view">
-        <!-- Movie 1 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
+    <div class="movie-scroll-view">
+      <!-- Movie 1 -->
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
         </div>
 
-        <!-- movie 2 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <!-- Movie 3 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-        
-        <!-- Movie 4 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-        
-        <!-- Movie 5 -->
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
-        </div>
-
-        <div class="movie-container">
-          <div class="movie-poster">
-            <img src="./assets/posters/matrix.webp" alt="" />
-          </div>
-
-          <div class="movie-title">The Matrix</div>
-          <div class="movie-details">
-            <div class="movie-year">2023</div>
-            <div class="movie-rating">7.5</div>
-          </div>
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
         </div>
       </div>
+
+      <!-- movie 2 -->
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
+        </div>
+
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
+        </div>
       </div>
-    </section>
-  </body>
-  <script src="index.js" type="module"></script>
+
+      <!-- Movie 3 -->
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
+        </div>
+
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
+        </div>
+      </div>
+
+      <!-- Movie 4 -->
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
+        </div>
+
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
+        </div>
+      </div>
+
+      <!-- Movie 5 -->
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
+        </div>
+
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
+        </div>
+
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
+        </div>
+
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
+        </div>
+      </div>
+
+
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
+        </div>
+
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
+        </div>
+      </div>
+
+      <div class="movie-container">
+        <div class="movie-poster">
+          <img src="./assets/posters/matrix.webp" alt="" />
+        </div>
+
+        <div class="movie-title">The Matrix</div>
+        <div class="movie-details">
+          <div class="movie-year">2023</div>
+          <div class="movie-rating">7.5</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</body>
+<script src="index.j" type="module"></script>
+
 </html>
