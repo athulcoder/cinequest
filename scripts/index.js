@@ -1,13 +1,16 @@
 import {
-  getMovies,
   popularMovies,
   upcomingMovies,
   nowPlayingMovies,
+  topRatedMovies,
+  getMovies,
 } from "./data/movies.js";
+
 import { search } from "./search.js";
 import { formatMovieRating } from "./utils/utils.js";
 async function getAll() {
   await getMovies("popular");
+  await getMovies("top_rated");
   await getMovies("now_playing");
   await getMovies("upcoming");
   renderMovieHTML();
@@ -18,6 +21,7 @@ getAll();
 
 function renderMovieHTML() {
   generateHTML(popularMovies, "popular");
+  generateHTML(topRatedMovies, "top-rated");
   generateHTML(nowPlayingMovies.reverse(), "now-playing");
   generateHTML(upcomingMovies.reverse(), "upcoming");
 }

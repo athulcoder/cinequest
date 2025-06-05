@@ -61,12 +61,13 @@ function renderSingleMovieHTML() {
         </p>
       </div>
 
+      
+       <span class="single-movie-cast-title">Cast</span>
+    <div class="single-movie-cast-box">
+     
+    </div>
      
     </section>
-   
- 
-
-
   `;
 
   document.body.innerHTML = html;
@@ -75,5 +76,27 @@ function renderSingleMovieHTML() {
     window.location.href = "./index.html";
   });
 
+  generateCastHTML(singleMovieData);
   search();
+}
+
+async function generateCastHTML(movieData) {
+  let html = "";
+
+  let casts = await movieData.getImportantCast();
+
+  casts.forEach((cast) => {
+    html += `
+  <div class="cast-box">
+        <div class="cast-img-box">
+          <img src="${cast.getProfileUrl()}" alt="" />
+        </div>
+        <div class="cast-name">${cast.name}</div>
+  </div>
+  
+  `;
+  });
+
+  console.log(html);
+  document.querySelector(".single-movie-cast-box").innerHTML = html;
 }
