@@ -1,7 +1,6 @@
 import { getMovieDetails, singleMovieData } from "./data/movies.js";
+import { search } from "./search.js";
 import { formatMovieRating } from "./utils/utils.js";
-
-console.log("Welcome");
 let url = new URL(window.location.href);
 let movieId = url.searchParams.get("movieId");
 
@@ -70,4 +69,6 @@ function renderSingleMovieHTML() {
   document.querySelector(".back-button").addEventListener("click", () => {
     window.location.href = "./index.html";
   });
+
+  search();
 }

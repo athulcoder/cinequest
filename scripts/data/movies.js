@@ -41,6 +41,7 @@ class Movie {
 
 const apiKey = "6611e0fcfa7c8d1e9db14266919ca167";
 
+export let searchedMovies;
 export let singleMovieData;
 // Global Arrays of movies
 export let popularMovies = [];
@@ -51,7 +52,6 @@ export let upcomingMovies = [];
 export let getMovies = async (type) => {
   const url = `https://api.themoviedb.org/3/movie/${type}?api_key=${apiKey}`;
 
-  console.log(url);
   let response = await fetch(url);
 
   let data = await response.json();
@@ -70,7 +70,6 @@ export let getMovies = async (type) => {
     });
   });
   if (type === "popular") {
-    console.log(moviesCollection);
     popularMovies = moviesCollection;
   } else if (type === "upcoming") {
     upcomingMovies = moviesCollection;
@@ -96,4 +95,28 @@ export async function getMovieDetails(movieId) {
     genres: data.genres,
   });
   singleMovieData = movieData;
+}
+
+export async function getMoviesBySearch(query) {
+  let url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`;
+
+  let response = await fetch(url);
+
+  let data = await response.json();
+
+  let moviesCollection = data.results.map((movie) => {
+    return new Movie({
+      id: movie.id,
+      title: movie.title,
+      releaseDate: movie.release_date,
+      rating: movie.vote_average,
+      posterPath: movie.poster_path,
+      description: movie.overview,
+      originalLanguage: movie.original_language,
+      genreIds: movie.genre_ids,
+      genres: movie.genres,
+    });
+  });
+
+  searchedMovies = moviesCollection;
 }

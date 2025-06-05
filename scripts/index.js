@@ -4,12 +4,14 @@ import {
   upcomingMovies,
   nowPlayingMovies,
 } from "./data/movies.js";
+import { search } from "./search.js";
 import { formatMovieRating } from "./utils/utils.js";
 async function getAll() {
   await getMovies("popular");
   await getMovies("now_playing");
   await getMovies("upcoming");
   renderMovieHTML();
+  search();
 }
 
 getAll();
