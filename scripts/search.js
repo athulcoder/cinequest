@@ -6,6 +6,7 @@ export function search() {
 
   let inputTextBox = document.querySelector(".navbar-search-input");
 
+  console.log("after input");
   //   Every time we input a character the event is fired
   inputTextBox.addEventListener("input", async () => {
     // first changing the search button to close button
@@ -77,6 +78,13 @@ function generateSearchHTML() {
       </div>
     </div>`;
   });
+  if (!html) {
+    html = `
+    <div class="no-results">
+    No Results Found
+    </div>
+    `;
+  }
 
   document.querySelector(".js-search-result-box").innerHTML = html;
 }

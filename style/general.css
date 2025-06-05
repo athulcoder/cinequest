@@ -128,6 +128,11 @@
     border-radius: 10px;
 }
 
+.result-movie-poster {
+    min-height: 80px;
+    min-width: 60px;
+}
+
 .result-movie-poster img {
     width: 60px;
     height: 80px;
@@ -148,9 +153,13 @@
     font-size: 16px;
     color: white;
     font-weight: 700;
+    min-width: 70px;
+    min-height: 20px;
 }
 
 .result-movie-year {
+    min-width: 20px;
+    min-height: 13px;
     font-weight: 200px;
     font-size: 14px;
     color: rgb(149, 151, 152);
@@ -162,4 +171,17 @@
     gap: 5px;
     font-size: 13px;
     color: yellow;
+    min-width: 10px;
+    min-height: 13px;
+}
+
+
+/* no result found */
+
+.no-results {
+    color: green;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20%;
+    font-family: Arial, sans-serif;
 }

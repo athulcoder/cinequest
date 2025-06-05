@@ -62,7 +62,7 @@
     font-weight: 100;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 23px;
     color: rgb(255, 255, 255);
     margin: 3px 5px;
     margin-top: 10px;
@@ -76,7 +76,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 19px;
     margin: 8px 5px;
     color: rgb(74, 81, 78);
 }
@@ -90,6 +90,7 @@
     width: 60px;
     display: flex;
     gap: 5px;
+    font-size: 20px;
     align-items: center;
 }
 
@@ -97,15 +98,22 @@
     padding: 10px;
 }
 
-.single-movie-desc-box span {
+.single-movie-desc-box div {
     font-weight: 900;
-    font-size: 22px;
+    font-size: 24px;
+    min-height: 30px;
+
+    min-width: 100px;
 }
 
 .single-movie-desc {
     color: rgb(92, 82, 82);
     font-weight: 100;
-    font-size: 14px;
+    font-size: 17px;
+    min-height: 100px;
+    margin-top: 10px;
+    min-width: 200px;
+    margin-bottom: 30px;
 }
 
 .single-movie-cast-box {

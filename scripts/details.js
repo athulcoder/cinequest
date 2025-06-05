@@ -8,7 +8,7 @@ getMovieDetails(movieId).then(() => renderSingleMovieHTML());
 
 function renderSingleMovieHTML() {
   let html = `
-    <nav class="navbar">
+     <nav class="navbar">
       <div class="logo">CineQuest</div>
 
       <div class="navbar-search-box">
@@ -18,11 +18,15 @@ function renderSingleMovieHTML() {
           type="text"
         />
 
-        <button class="navbar-search-button">
+        <button class="navbar-search-button js-navbar-button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
     </nav>
+
+    <!-- search result box -->
+    <section class="search-result-box js-search-result-box">
+    </section>
 
     <button class="back-button"><i class="fa-solid fa-arrow-left"></i></button>
     <section class="single-movie-container">
@@ -51,7 +55,7 @@ function renderSingleMovieHTML() {
       </div>
 
       <div class="single-movie-desc-box">
-        <span>Description</span>
+        <div>Description</div>
         <p class="single-movie-desc">
           ${singleMovieData.description}
         </p>
@@ -70,5 +74,7 @@ function renderSingleMovieHTML() {
     window.location.href = "./index.html";
   });
 
+  console.log("before 1");
   search();
+  console.log("i am on");
 }
