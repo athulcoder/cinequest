@@ -50,7 +50,7 @@ function generateHTML(movieCollection, selector) {
   movieButtons.forEach((button) => {
     let movieId = button.dataset.movieId;
     button.addEventListener("click", () => {
-      window.location.href = `../details.html?movieId=${movieId}`;
+      window.location.href = `./details.html?movieId=${movieId}`;
     });
   });
 }

@@ -68,6 +68,6 @@ function renderSingleMovieHTML() {
 
   document.body.innerHTML = html;
   document.querySelector(".back-button").addEventListener("click", () => {
-    window.location.href = "../index.html";
+    window.location.href = "./index.html";
   });
 }
