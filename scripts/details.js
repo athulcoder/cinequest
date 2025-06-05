@@ -74,7 +74,5 @@ function renderSingleMovieHTML() {
     window.location.href = "./index.html";
   });
 
-  console.log("before 1");
   search();
-  console.log("i am on");
 }

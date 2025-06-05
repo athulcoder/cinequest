@@ -6,7 +6,6 @@ export function search() {
 
   let inputTextBox = document.querySelector(".navbar-search-input");
 
-  console.log("after input");
   //   Every time we input a character the event is fired
   inputTextBox.addEventListener("input", async () => {
     // first changing the search button to close button
@@ -64,7 +63,7 @@ export function search() {
 function generateSearchHTML() {
   let html = "";
   searchedMovies.forEach((movie) => {
-    html += `<div class="result-container">
+    html += `<div class="result-container" data-movie-id="${movie.id}">
       <div class="result-movie-poster ">
 
         <img src="${movie.getPosterUrl()}" alt="">
@@ -87,4 +86,15 @@ function generateSearchHTML() {
   }
 
   document.querySelector(".js-search-result-box").innerHTML = html;
+
+  // adding event listeners to each result box
+
+  document.querySelectorAll(".result-container").forEach((button) => {
+    button.addEventListener("click", () => {
+      let movieId = button.dataset.movieId;
+      button.addEventListener("click", () => {
+        window.location.href = `./details.html?movieId=${movieId}`;
+      });
+    });
+  });
 }
