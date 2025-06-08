@@ -49,6 +49,47 @@
 
 }
 
+/* Genres box  */
+
+
+.selector-box {
+    display: flex;
+
+    width: 100%;
+    height: 30px;
+    background-color: rgb(7, 0, 22);
+    color: white;
+    overflow-x: auto;
+    /* allows horizontal scrolling */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    border-bottom: 1px solid rgb(34, 33, 33);
+    border-top: 1px solid rgb(34, 33, 33);
+}
+
+.selector-box li {
+    list-style: none;
+    height: 100%;
+    width: 120px;
+    padding: 0px 10px;
+    border-right: 1px solid rgb(34, 33, 33);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.selector-box::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge */
+}
+
 /* Main Grid */
 
 .main-grid {
@@ -92,13 +133,13 @@
     height: 310px;
     background-color: rgb(25, 25, 32);
     border-radius: 10px 10px 10px 10px;
-    border: 1px solid rgb(59, 59, 59);
+    border: 2px solid rgb(59, 59, 59);
     cursor: pointer;
     transition: 0.5s;
 }
 
 .movie-container:hover {
-    border: 1px solid rgb(45, 209, 12);
+    border: 2px solid rgb(45, 209, 12);
 }
 
 .movie-poster,
